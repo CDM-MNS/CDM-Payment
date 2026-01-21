@@ -1,0 +1,13 @@
+services:
+  cdm-payment-service:
+    build: .
+    env_file:
+      - .env.docker
+    ports:
+      - "4011:4011"
+    networks:
+      - cdm-network
+
+networks:
+  cdm-network:
+    driver: bridge
